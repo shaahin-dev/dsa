@@ -68,11 +68,13 @@ func (ll *LinkedList) Find(vale interface{}) *Node {
 }
 
 func (ll *LinkedList) Reverse() {
-	var prev, next *Node
-	current := ll.head
+	var prev *Node = ll.head
+	var current *Node = ll.head.next
 	ll.tail = ll.head
+	ll.tail.next = nil
+
 	for current != nil {
-		next = current.next
+		var next *Node = current.next
 		current.next = prev
 		prev = current
 		current = next
