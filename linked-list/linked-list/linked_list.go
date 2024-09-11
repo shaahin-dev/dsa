@@ -81,3 +81,20 @@ func (ll *LinkedList) Reverse() {
 	}
 	ll.head = prev
 }
+
+func (ll *LinkedList) FindKthFromEnd(k int) {
+	firstPoint := ll.head
+	secondPont := ll.head
+	if k == 0 {
+		secondPont = ll.tail
+	}
+	for k-1 != 0 {
+		secondPont = secondPont.next
+		k--
+	}
+	for secondPont != ll.tail {
+		firstPoint = firstPoint.next
+		secondPont = secondPont.next
+	}
+	fmt.Printf("k'th node from end is %d", firstPoint.value)
+}

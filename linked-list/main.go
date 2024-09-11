@@ -1,6 +1,6 @@
 package main
 
-import linked_list "reverse-linked-list/linked-list"
+import linked_list "linked-list/linked-list"
 
 func main() {
 	ll := &linked_list.LinkedList{}
@@ -11,4 +11,5 @@ func main() {
 	ll.Remove(1)
 	ll.Reverse()
 	ll.Show()
+	ll.FindKthFromEnd(2)
 }
