@@ -3,14 +3,14 @@ package stack
 import "fmt"
 
 type Stack struct {
-	items []int
+	items []rune
 }
 
-func (s *Stack) Push(item int) {
+func (s *Stack) Push(item rune) {
 	s.items = append(s.items, item)
 }
 
-func (s *Stack) Pop() (int, error) {
+func (s *Stack) Pop() (rune, error) {
 	if s.IsEmpty() {
 		return 0, fmt.Errorf("stack is empty")
 	}
@@ -20,7 +20,7 @@ func (s *Stack) Pop() (int, error) {
 	return topItem, nil
 }
 
-func (s *Stack) Peek() (int, error) {
+func (s *Stack) Peek() (rune, error) {
 	if s.IsEmpty() {
 		return 0, fmt.Errorf("stack is empty")
 	}
