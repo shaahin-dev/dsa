@@ -22,6 +22,8 @@ func main() {
 	}
 	fmt.Println(pop)
 	stack.Show()
-	reverseString := projects.ReverseString("abcef")
-	println(reverseString)
+	reverseString := projects.ReverseString("abcdef")
+	fmt.Println(reverseString)
+	fmt.Println(projects.IsBalanced("(2+2)*[(2*4)]"))
+	fmt.Println(projects.IsBalanced("(2+2)*[(2*4]"))
 }
