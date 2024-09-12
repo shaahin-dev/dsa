@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"stack/projects"
 	"stack/stack"
 )
 
@@ -21,4 +22,6 @@ func main() {
 	}
 	fmt.Println(pop)
 	stack.Show()
+	reverseString := projects.ReverseString("abcef")
+	println(reverseString)
 }
